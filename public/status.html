@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pulse — System Status</title>
+<meta name="description" content="Live uptime and incident history for the services Pulse monitors.">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230e1220'/%3E%3Cpath d='M5 17h5l3-8 4 15 3-7h7' stroke='%2338d39f' stroke-width='2.4' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">
+      <span class="mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l2.5-7 4 14 2.5-7h5"/></svg>
+      </span>
+      <div>
+        <h1>Pulse</h1>
+        <div class="sub">system status</div>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="/status" class="on">Status</a>
+      <a href="/">Dashboard</a>
+    </nav>
+  </header>
+
+  <div class="banner" id="banner">
+    <span class="dot nodata" id="bannerDot"></span>
+    <h2 id="bannerText">Loading…</h2>
+    <div class="meta" id="bannerMeta"></div>
+  </div>
+
+  <div class="summary">
+    <div class="stat"><div class="k">Monitors</div><div class="v" id="sMonitors">–</div></div>
+    <div class="stat"><div class="k">Uptime 90d</div><div class="v" id="sUptime">–</div></div>
+    <div class="stat"><div class="k">Open incidents</div><div class="v" id="sIncidents">–</div></div>
+    <div class="stat"><div class="k">Last refresh</div><div class="v" id="sRefresh" style="font-size:14px">–</div></div>
+  </div>
+
+  <div id="monitors"></div>
+
+  <h3 class="section-title">Recent incidents</h3>
+  <div id="incidents"></div>
+
+  <p class="foot">Pulse — self-hosted uptime monitoring · <a href="/">dashboard</a></p>
+</div>
+<script src="/status.js"></script>
+</body>
+</html>
